@@ -12,20 +12,20 @@ public class RegisteredClientRepo implements RegisteredClientRepository {
 
     @Override
     public void save(RegisteredClient registeredClient) {
-
+        //Do nothing
     }
 
     @Override
     public RegisteredClient findById(String id) {
-        return registeredClient(id);
+        return registeredClient();
     }
 
     @Override
     public RegisteredClient findByClientId(String clientId) {
-        return registeredClient(clientId);
+        return registeredClient();
     }
 
-    private RegisteredClient registeredClient(String clientId) {
+    private RegisteredClient registeredClient() {
         return RegisteredClient
                 .withId("90ef5341-7e5a-482a-a6fb-049db7992301")
                 .clientId("90ef5341-7e5a-482a-a6fb-049db7992301")
