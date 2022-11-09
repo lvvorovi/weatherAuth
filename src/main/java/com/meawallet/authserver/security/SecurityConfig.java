@@ -37,7 +37,7 @@ public class SecurityConfig {
 
         UserDetails userDetails = User
                 .withUsername("user")
-                .password(passwordEncoder().encode("password"))
+                .password(bCryptPasswordEncoder().encode("password"))
                 .roles()
                 .build();
 
@@ -46,7 +46,7 @@ public class SecurityConfig {
     }
 
     @Bean
-    public PasswordEncoder passwordEncoder() {
+    public BCryptPasswordEncoder bCryptPasswordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
